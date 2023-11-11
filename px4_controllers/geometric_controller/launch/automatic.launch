@@ -1,0 +1,23 @@
+<launch>
+  <arg name="mav_name" default="tarot"/>
+  <arg name="log_folder" default="/home/analys/log"/> 
+  
+  <node pkg="geometric_controller" type="geometric_controller_node" name="geometric_controller" output="screen">
+          <param name="Automatic" value="true"/>
+          <param name="mav_name" type="string" value="$(arg mav_name)" />
+          <param name="log_folder" type="string" value="$(arg log_folder)" />
+          <param name="ctrl_mode" value="2.0" />
+          <param name="max_acc" value="4.0" />
+          <param name="landing_vel" value="0.35" />
+          <param name="Kp_x" value="1.5"/>
+          <param name="Kp_y" value="1.5"/>
+          <param name="Kp_z" value="1.0"/>
+          <param name="Kv_x" value="2.0"/>
+          <param name="Kv_y" value="2.0"/>
+          <param name="Kv_z" value="2.0"/>
+          <param name="D_x" value="0.0"/>
+          <param name="D_y" value="0.0"/>
+          <param name="D_z" value="0.0"/>
+  </node>
+
+</launch>

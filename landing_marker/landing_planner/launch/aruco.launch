@@ -1,0 +1,12 @@
+<launch>
+  <node pkg="marker_planner" type="marker_planner_node" name="marker_planner" output="screen">
+  </node>
+  <node pkg="aruco_gridboard" type="aruco_gridboard" name="aruco_gridboard" output="screen" >
+    <param name="board_path" value="$(find aruco_gridboard)/data/layout.yaml" />
+    <param name="detector_param_path" value="$(find aruco_gridboard)/data/detector_params.yml" />
+    <param name="debug_display" value="false" />
+   
+    <remap from="/aruco_gridboard/camera_info" to="/camera/color/camera_info"/>
+    <remap from="/aruco_gridboard/image_raw" to="/camera/image_raw"/>
+  </node>
+</launch>

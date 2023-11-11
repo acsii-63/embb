@@ -1,0 +1,32 @@
+count: 4
+goal : 3
+
+s1 :
+  type: "t"
+  height: 3.0
+  timeout: 30.0
+  failsafe: 4
+
+s2 :
+  type: "m"
+  count: 1
+  timeout: 60.0
+  t1 : [21.0064755,105.8432823,25.0]
+  failsafe: 4
+
+s3 :
+  type: "k"
+  count: 3
+  t1 : [50.0,6.0,1.0]
+  t2 : [5.0,2.0,1.0]
+  t3 : [3.0,0.0,1.0]
+  height: 1.0
+  timeout: 30.0
+  failsafe: 4
+
+s4 :
+  type: "m"
+  count: 1
+  timeout: 60.0
+  t1 : [21.0065160,105.8429543,3.0]
+  failsafe: 0

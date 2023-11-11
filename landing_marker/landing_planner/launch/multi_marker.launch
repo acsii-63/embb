@@ -1,0 +1,37 @@
+<launch>
+  <node pkg="marker_planner" type="marker_planner_node" name="marker_planner" output="screen">
+  </node>
+  <node pkg="aruco_gridboard" type="aruco_gridboard" name="aruco_gridboard" output="screen" >
+    <param name="board_path" value="$(find aruco_gridboard)/data/layout.yaml" />
+    <param name="detector_param_path" value="$(find aruco_gridboard)/data/detector_params.yml" />
+    <param name="debug_display" value="false" />
+   
+    <remap from="/aruco_gridboard/camera_info" to="/camera/camera_info"/>
+    <remap from="/aruco_gridboard/image_raw" to="/camera/image_raw"/>
+  </node>
+
+  <node name="whycon" type="whycon" pkg="whycon" output="screen">
+    <param name="name" value="whycon"/>
+    <param name="targets" value="4"/>
+    <param name="max_refine" value="5"/>
+    <param name="max_attempts" value="5"/>
+    <param name="outer_diameter" value="0.7"/>
+    <param name="inner_diameter" value="0.35"/>
+    <param name="max_distance" value="2.0"/>
+  </node>
+
+  <arg name="launch_prefix" default="" /> <!-- set to value="gdbserver localhost:10000" for remote debugging -->
+  <!-- Set parameters -->
+  <rosparam command="load" file="$(find apriltag_ros)/config/settings.yaml" ns="apriltag_ros_continuous_node" />
+  <rosparam command="load" file="$(find apriltag_ros)/config/tags.yaml" ns="apriltag_ros_continuous_node" />
+  <!-- <node pkg="detector" name="real_cam_node" type="real_cam2ros.py" output="screen"> </node> -->
+  <node pkg="apriltag_ros" type="apriltag_ros_continuous_node" name="apriltag_ros_continuous_node" clear_params="true" output="screen" launch-prefix="$(arg launch_prefix)" >
+    <!-- Remap topics from those used in code to those on the ROS network -->
+    <remap from="image_rect" to="/camera/image_raw" />
+    <remap from="camera_info" to="/camera/camera_info" />
+
+    <param name="publish_tag_detections_image" type="bool" value="true" />      <!-- default: false -->
+    <param name="remove_duplicates" type="bool" value="true" />
+  </node>
+
+</launch>

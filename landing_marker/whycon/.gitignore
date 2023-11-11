@@ -1,0 +1,13 @@
+build
+papers
+Calib_Results*
+whycon.config
+whycon.creator*
+whycon.includes
+whycon.files
+doc
+images
+*.m
+TODO
+videos
+wiki

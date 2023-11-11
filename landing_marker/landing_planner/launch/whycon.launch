@@ -1,0 +1,21 @@
+<launch>
+  <node pkg="marker_planner" type="marker_planner_node" name="marker_planner" output="screen">
+  </node>
+  <arg name="name" default="whycon"/>
+  <node name="whycon" type="whycon" pkg="whycon" output="screen">
+    <!-- <remap from="/camera/image_raw" to="/camera/image_raw"/>
+    <remap from="/camera/color/camera_info" to="/camera/camera_info"/> -->
+    <!-- <param name="targets" value="$(arg targets)"/> -->
+    <param name="name" value="$(arg name)"/>
+    <param name="targets" value="1"/>
+    <param name="max_refine" value="5"/>
+    <param name="max_attempts" value="5"/>
+    <param name="outer_diameter" value="1.0"/>
+    <param name="inner_diameter" value="0.41"/>
+
+    <param name="offset_x" value="1.2"/>
+    <param name="offset_y" value="0.0"/>
+    <!-- <param name="outer_diameter" value="0.5"/>
+    <param name="inner_diameter" value="0.125"/> -->
+  </node>
+</launch>

@@ -1,0 +1,20 @@
+<launch>
+  <arg name="name" default="whycon"/>
+
+  <node name="whycon" type="whycon" pkg="whycon" output="screen">
+    <!-- <remap from="/camera/image_raw" to="/camera/image_raw"/>
+    <remap from="/camera/color/camera_info" to="/camera/camera_info"/> -->
+    <param name="name" value="$(arg name)"/>
+    <param name="targets" value="4"/>
+    <param name="max_refine" value="5"/>
+    <param name="max_attempts" value="5"/>
+    <param name="outer_diameter" value="0.7"/>
+    <param name="inner_diameter" value="0.35"/>
+    <param name="max_distance" value="2.0"/>
+    <param name="offset_x" value="0.0"/>
+    <param name="offset_y" value="0.0"/>
+    <!-- <param name="outer_diameter" value="0.5"/>
+    <param name="inner_diameter" value="0.125"/> -->
+  </node>
+
+</launch>

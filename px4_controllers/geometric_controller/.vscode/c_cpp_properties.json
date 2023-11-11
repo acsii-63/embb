@@ -1,0 +1,61 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/analys/emb_ws/devel/include/**",
+        "/home/analys/ego_planner_swarm_ar/devel/include/**",
+        "/home/analys/RotorTM/devel/include/**",
+        "/home/analys/lidar_ws/devel/include/**",
+        "/home/analys/AirSim/ros/devel/include/**",
+        "/home/analys/catkin_ws/devel/include/**",
+        "/home/analys/flightmare_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/analys/AirSim/ros/src/airsim_ros_pkgs/include/**",
+        "/home/analys/catkin_ws/src/apriltag_ros/apriltag_ros/include/**",
+        "/home/analys/lidar_ws/src/image_common/camera_calibration_parsers/include/**",
+        "/home/analys/lidar_ws/src/image_common/camera_info_manager/include/**",
+        "/home/analys/emb_ws/src/px4_controllers/controller_msgs/include/**",
+        "/home/analys/lidar_ws/src/cv_camera/include/**",
+        "/home/analys/ego_planner_swarm_ar/src/planner/drone_detect/include/**",
+        "/home/analys/ego_planner_swarm_ar/src/planner/plan_manage/include/**",
+        "/home/analys/flightmare_ws/src/flightmare/flightlib/include/**",
+        "/home/analys/flightmare_ws/src/flightmare/flightros/include/**",
+        "/home/analys/emb_ws/src/px4_controllers/geometric_controller/include/**",
+        "/home/analys/lidar_ws/src/image_common/image_transport/include/**",
+        "/home/analys/catkin_ws/src/mavros/libmavconn/include/**",
+        "/home/analys/emb_ws/src/landing_planner/include/**",
+        "/home/analys/catkin_ws/src/mavros/mavros/include/**",
+        "/home/analys/catkin_ws/src/mavros/mavros_msgs/include/**",
+        "/home/analys/catkin_ws/src/nlopt_ros/include/**",
+        "/home/analys/lidar_ws/src/ouster-ros/include/**",
+        "/home/analys/ego_planner_swarm_ar/src/planner/path_searching/include/**",
+        "/home/analys/ego_planner_swarm_ar/src/planner/plan_env/include/**",
+        "/home/analys/lidar_ws/src/image_common/polled_camera/include/**",
+        "/home/analys/ego_planner_swarm_ar/src/Utils/pose_utils/include/**",
+        "/home/analys/catkin_ws/src/VIO/include/**",
+        "/home/analys/flightmare_ws/src/rpg_quadrotor_common/quadrotor_common/include/**",
+        "/home/analys/ego_planner_swarm_ar/src/Utils/quadrotor_msgs/include/**",
+        "/home/analys/ego_planner_swarm_ar/src/Utils/selected_points_publisher/include/**",
+        "/home/analys/flightmare_ws/src/rpg_quadrotor_common/state_predictor/include/**",
+        "/home/analys/ego_planner_swarm_ar/src/planner/swarm_bridge/include/**",
+        "/home/analys/catkin_ws/src/mavros/test_mavros/include/**",
+        "/home/analys/ego_planner_swarm_ar/src/planner/traj_opt/include/**",
+        "/home/analys/ego_planner_swarm_ar/src/planner/traj_utils/include/**",
+        "/home/analys/ego_planner_swarm_ar/src/Utils/uav_utils/include/**",
+        "/home/analys/lidar_ws/src/usb_cam/include/**",
+        "/home/analys/catkin_ws/src/whycon/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

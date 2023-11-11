@@ -1,0 +1,8 @@
+#request fields
+int8 seq
+float64 sub
+geometry_msgs/PoseArray target
+---
+#response constants
+bool success
+int8 result

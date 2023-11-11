@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>controller_msgs</name>
+  <version>0.0.1</version>
+  <description>
+    controller_msgs includes the definition for custom messages for the px4_controllerspackage.
+  </description>
+
+  <maintainer email="shatapdude@gmail.com">ana_lys</maintainer>
+  <author email="shatapdude@gmail.com">ana_lys</author>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>mavros_msgs</depend>
+  <depend>sensor_msgs</depend>
+
+  <export>
+    <architecture_independent/>
+  </export>
+</package>

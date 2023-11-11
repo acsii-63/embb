@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="marker_planner" type="marker_planner_node" name="marker_planner" output="screen">
+  </node>
+</launch>
